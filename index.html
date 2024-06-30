@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./output.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <script defer src="./app.js"></script>
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body class="font-karla2 px-4 pt-4 flex justify-center items-center flex-col bg-LightGreen">
+    <div id="successMessage"
+        class="successMessage delay-1000 bg-DarkGreg text-White p-5 rounded-2xl -translate-y-44 transition-all duration-300 ease-in-out">
+        <div class="">
+
+            <h1 class="flex items-center text-4 capitalize"><span><img src="/assets/images/icon-success-check.svg" alt=""></span >
+                message sent!</h1>
+            <div>
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <form class="container bg-White p-6 xl:w-[700px] xl:p-8" action="index.html">
+            <fieldset>
+                <legend class="text-DarkGreg capitalize font-bold text-5 font-karla3 mb-7">contact us</legend>
+                <div class="xl:flex xl:w-full justify-between gap-3">
+                    <div class="mb-5 xl:w-1/2">
+                        <label class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg" for="FirstNameInput">first name<span
+                                class="text-Green " aria-hidden="true"> *</span></label>
+                        <input
+                            class="indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 "
+                            type="text" id="FirstNameInput" aria-required="true" name="first-name">
+                        <p class=" text-Red italic text-1 font-bold" id="FirstNameError" aria-describedby="first name error"></p>
+                    </div>
+                    <div class="mb-5 xl:w-1/2">
+                        <label class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg" for="LastNameInput">last name <span class="text-Green "
+                                aria-hidden="true">*</span></label>
+                        <input
+                            class="indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 "
+                            type="text" aria-required="true" id="LastNameInput" name="last-name">
+                        <p class="text-Red text-1 italic font-bold" id="LastNameError" aria-describedby="last name error"></p>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <label class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg" for="EamilAddressInput">email address <span class="text-Green "
+                            aria-hidden="true">*</span></label><br>
+                    <input
+                        class="indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 "
+                        type="email" aria-required="true" id="EamilAddressInput" name="email">
+                    <p class="text-Red text-1 italic font-bold" id="EmailError" aria-describedby="email address error"></p>
+                </div>
+
+            </fieldset>
+            <div class="mb-5">
+                <fieldset >
+                    <legend class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg">query type <span class="text-Green " aria-hidden="true">*</span></legend>
+                    <div class="xl:flex xl:gap-3">
+                        <div class="back gap-3  pl-4 flex items-center focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 mb-5">
+                            <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" name="query-type" value="general" aria-required="true" tabindex="-1" id="query-general">
+                            <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-general">general enquiry</label>
+                        </div>
+                        <div class="back gap-3 pl-4 flex items-center focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 ">
+                            <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" id="query-support" value="support" aria-required="true" tabindex="-1" name="query-type">
+                            <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-support">support request</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <p class="text-Red text-1 italic font-bold" id="query-type-error" aria-describedby="query-type error"></p>
+            </div>
+
+            <div class="mb-5">
+                <label class="flex gap-2 font-semibold capitalize">message<span aria-hidden="false">*</span></label><br>
+                <textarea class=" indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-40 rounded-md w-full mt-2 " name="message" id="MessageInput" rows="3" aria-required="true"></textarea>
+                <p class="text-Red text-1 italic font-bold" id="MessageError" aria-describedby="message error"></p>
+            </div>
+
+            <div >
+                <div class="flex gap-4 items-center flex-nowrap">
+                    <input  class="cursor-pointer accent-green-600 h-4 w-4" type="checkbox" name="consent" id="consent" aria-required="true">
+                    <label class="cursor-pointer" for="consent">I hereby consent to being contacted by team <span class="text-Green"
+                            aria-hidden="true">*</span></label>
+                </div>
+                <p class="text-Red text-1 italic font-bold" id="ConsentError" aria-describedby="consent error"></p>
+            </div>
+
+            <button class="bg-Green rounded-md mt-11 text-White w-full h-12 text-center" type="submit">Submit</button>
+        </form>
+    </main>
+
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+</body>
+
+</html>

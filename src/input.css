@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+--LightGreen: hsl(148, 38%, 91%);
+--Green: hsl(169, 82%, 27%);
+--Red: hsl(0, 66%, 56%);
+--White: hsl(0, 0%, 100%);
+--MediumGrey: hsl(186, 15%, 59%);
+--DarkGrey: hsl(187, 24%, 22%);
+}
+
+@layer{
+    @font-face {
+        font-family: karla1;
+        src: url(/assets/fonts/Karla-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+        font-family: karla2;
+        src: url(/assets/fonts/static/Karla-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: karla3;
+        src: url(/assets/fonts/static/Karla-Bold.ttf);
+    }
+
+    .checkedImg{
+        @apply hidden  
+    }
+
+    .active{
+        @apply block
+    }
+
+    
+}
