@@ -36,12 +36,12 @@
         </div>
     </div>
     <main>
-        <form class="container bg-White p-6 xl:w-[700px] xl:p-8 rounded-xl" action="index.html">
+        <form class="container bg-White p-6 xl:w-[700px] xl:p-8 rounded-md" action="index.html">
             <fieldset>
                 <legend class="text-DarkGreg capitalize font-bold text-5 font-karla3 mb-7">contact us</legend>
                 <div class="xl:flex xl:w-full justify-between gap-3">
                     <div class="mb-5 xl:w-1/2">
-                        <label class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg" for="FirstNameInput">first name<span
+                        <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="FirstNameInput">first name<span
                                 class="text-Green " aria-hidden="true"> *</span></label>
                         <input
                             class="indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-11 rounded-md w-full mt-2 "
@@ -49,20 +49,20 @@
                         <p class=" text-Red italic text-1 font-bold" id="FirstNameError" aria-describedby="first name error"></p>
                     </div>
                     <div class="mb-5 xl:w-1/2">
-                        <label class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg" for="LastNameInput">last name <span class="text-Green "
+                        <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="LastNameInput">last name <span class="text-Green "
                                 aria-hidden="true">*</span></label>
                         <input
-                            class="indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 "
+                            class="indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-11 rounded-md w-full mt-2 "
                             type="text" aria-required="true" id="LastNameInput" name="last-name">
                         <p class="text-Red text-1 italic font-bold" id="LastNameError" aria-describedby="last name error"></p>
                     </div>
                 </div>
 
                 <div class="mb-5">
-                    <label class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg" for="EamilAddressInput">email address <span class="text-Green "
+                    <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="EamilAddressInput">email address <span class="text-Green "
                             aria-hidden="true">*</span></label>
                     <input
-                        class="indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 "
+                        class="indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-11 rounded-md w-full mt-2 "
                         type="email" aria-required="true" id="EamilAddressInput" name="email">
                     <p class="text-Red text-1 italic font-bold" id="EmailError" aria-describedby="email address error"></p>
                 </div>
@@ -70,13 +70,13 @@
             </fieldset>
             <div class="mb-5">
                 <fieldset >
-                    <legend class="flex gap-2 font-semibold capitalize text-2 text-DarkGreg">query type <span class="text-Green " aria-hidden="true">*</span></legend>
+                    <legend class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey">query type <span class="text-Green " aria-hidden="true">*</span></legend>
                     <div class="xl:flex xl:gap-3">
-                        <div class="back gap-3  pl-4 flex items-center focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 mb-5">
+                        <div class="back gap-3  pl-4 flex items-center focus:outline-Green cursor-pointer  border-MediumGrey border-[1px] h-11 rounded-md w-full mt-2 mb-5">
                             <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" name="query-type" value="general" aria-required="true" tabindex="-1" id="query-general">
                             <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-general">general enquiry</label>
                         </div>
-                        <div class="back gap-3 pl-4 flex items-center focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-11 rounded-md w-full mt-2 ">
+                        <div class="back gap-3 pl-4 flex items-center focus:outline-Green cursor-pointer border-MediumGrey border-[1px] h-11 rounded-md w-full mt-2 ">
                             <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" id="query-support" value="support" aria-required="true" tabindex="-1" name="query-type">
                             <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-support">support request</label>
                         </div>
@@ -86,8 +86,8 @@
             </div>
 
             <div class="mb-5">
-                <label class="flex gap-2 font-semibold capitalize">message<span aria-hidden="false">*</span></label><br>
-                <textarea class=" indent-3 focus:outline-Green cursor-pointer outline-DarkGreg border-DarkGreg border-[1px] h-40 rounded-md w-full mt-2 " name="message" id="MessageInput" rows="3" aria-required="true"></textarea>
+                <label class="text-MediumGrey flex gap-2 font-semibold capitalize">message<span aria-hidden="false">*</span></label><br>
+                <textarea class=" indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-40 rounded-md w-full mt-2 " name="message" id="MessageInput" rows="3" aria-required="true"></textarea>
                 <p class="text-Red text-1 italic font-bold" id="MessageError" aria-describedby="message error"></p>
             </div>
 
