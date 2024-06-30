@@ -24,8 +24,10 @@
 </head>
 
 <body class="font-karla2 px-4 pt-4 flex justify-center items-center flex-col bg-LightGreen">
-    <div id="successMessage"
-        class="successMessage delay-700 bg-DarkGreg text-White p-5 rounded-2xl -translate-y-44 transition-all duration-300 ease-in-out">
+    
+    <main>
+        <div id="successMessage"
+        class="successMessage delay-700 bg-DarkGreg text-White p-5 rounded-2xl -translate-y-44 transition-all duration-300 ease-in-out lg:w-9/12 m-auto">
         <div class="">
 
             <h1 class="flex items-center text-4 capitalize"><span><img src="assets/images/icon-success-check.svg" alt=""></span >
@@ -35,12 +37,12 @@
             </div>
         </div>
     </div>
-    <main>
-        <form class="container bg-White p-6 xl:w-[700px] xl:p-8 rounded-2xl" action="index.html">
+
+        <form class="container bg-White p-6 lg:w-[700px] lg:p-8 rounded-xl" action="index.html">
             <fieldset>
                 <legend class="text-DarkGreg capitalize font-bold text-5 font-karla3 mb-7">contact us</legend>
-                <div class="xl:flex xl:w-full justify-between gap-3">
-                    <div class="mb-5 xl:w-1/2">
+                <div class="lg:flex lg:w-full justify-between gap-3">
+                    <div class="mb-5 lg:w-1/2">
                         <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="FirstNameInput">first name<span
                                 class="text-Green " aria-hidden="true"> *</span></label>
                         <input
@@ -48,7 +50,7 @@
                             type="text" id="FirstNameInput" aria-required="true" name="first-name">
                         <p class=" text-Red italic text-1 font-bold" id="FirstNameError" aria-describedby="first name error"></p>
                     </div>
-                    <div class="mb-5 xl:w-1/2">
+                    <div class="mb-5 lg:w-1/2">
                         <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="LastNameInput">last name <span class="text-Green "
                                 aria-hidden="true">*</span></label>
                         <input
@@ -71,7 +73,7 @@
             <div class="mb-5">
                 <fieldset >
                     <legend class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey">query type <span class="text-Green " aria-hidden="true">*</span></legend>
-                    <div class="xl:flex xl:gap-3">
+                    <div class="lg:flex lg:gap-3">
                         <div class="back gap-3  pl-4 flex items-center focus:outline-Green cursor-pointer  border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 mb-5">
                             <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" name="query-type" value="general" aria-required="true" tabindex="-1" id="query-general">
                             <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-general">general enquiry</label>
@@ -86,7 +88,7 @@
             </div>
 
             <div class="mb-5">
-                <label class="text-MediumGrey flex gap-2 font-semibold capitalize">message<span aria-hidden="false">*</span></label><br>
+                <label for="MessageInput" class="text-MediumGrey flex gap-2 font-semibold capitalize">message<span aria-hidden="false">*</span></label>
                 <textarea class=" indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-40 rounded-md w-full mt-2 " name="message" id="MessageInput" rows="3" aria-required="true"></textarea>
                 <p class="text-Red text-1 italic font-bold" id="MessageError" aria-describedby="message error"></p>
             </div>
@@ -106,10 +108,12 @@
 
 
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </div>
+    </footer>
 
 </body>
 
