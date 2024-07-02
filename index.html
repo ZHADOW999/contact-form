@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="./output.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <script defer src="./app.js"></script>
     <title>Frontend Mentor | Contact form</title>
 
@@ -30,7 +30,7 @@
         class="successMessage delay-700 bg-DarkGreg text-White p-5 rounded-2xl -translate-y-44 transition-all duration-300 ease-in-out lg:w-9/12 m-auto">
         <div class="">
 
-            <h1 class="flex items-center text-4 capitalize"><span><img src="assets/images/icon-success-check.svg" alt=""></span >
+            <h1 class="flex items-center text-4 capitalize"><span><img src="/assets/images/icon-success-check.svg" alt=""></span >
                 message sent!</h1>
             <div>
                 <p>Thanks for completing the form. We'll be in touch soon!</p>
@@ -46,7 +46,7 @@
                         <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="FirstNameInput">first name<span
                                 class="text-Green " aria-hidden="true"> *</span></label>
                         <input
-                            class="indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 "
+                            class="focus:cursor-text indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 "
                             type="text" id="FirstNameInput" aria-required="true" name="first-name">
                         <p class=" text-Red italic text-1 font-bold" id="FirstNameError" aria-describedby="first name error"></p>
                     </div>
@@ -54,7 +54,7 @@
                         <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="LastNameInput">last name <span class="text-Green "
                                 aria-hidden="true">*</span></label>
                         <input
-                            class="indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 "
+                            class="focus:cursor-text indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 "
                             type="text" aria-required="true" id="LastNameInput" name="last-name">
                         <p class="text-Red text-1 italic font-bold" id="LastNameError" aria-describedby="last name error"></p>
                     </div>
@@ -64,7 +64,7 @@
                     <label class="flex gap-2 font-semibold capitalize text-2 text-MediumGrey" for="EamilAddressInput">email address <span class="text-Green "
                             aria-hidden="true">*</span></label>
                     <input
-                        class="indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 "
+                        class="focus:cursor-text indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 "
                         type="email" aria-required="true" id="EamilAddressInput" name="email">
                     <p class="text-Red text-1 italic font-bold" id="EmailError" aria-describedby="email address error"></p>
                 </div>
@@ -76,11 +76,14 @@
                     <div class="lg:flex lg:gap-3">
                         <div class="back gap-3  pl-4 flex items-center focus:outline-Green cursor-pointer  border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 mb-5">
                             <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" name="query-type" value="general" aria-required="true" tabindex="-1" id="query-general">
-                            <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-general">general enquiry</label>
+                            <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-general">
+                                general enquiry</label>
                         </div>
                         <div class="back gap-3 pl-4 flex items-center focus:outline-Green cursor-pointer border-MediumGrey border-[1px] h-12 rounded-md w-full mt-2 ">
                             <input class="accent-green-600 w-4 h-4 cursor-pointer" type="radio" id="query-support" value="support" aria-required="true" tabindex="-1" name="query-type">
-                            <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-support">support request</label>
+                            <label class="cursor-pointer capitalize text-2 text-DarkGreg" for="query-support">
+                                support request
+                            </label>
                         </div>
                     </div>
                 </fieldset>
@@ -88,21 +91,27 @@
             </div>
 
             <div class="mb-5">
-                <label for="MessageInput" class="text-MediumGrey flex gap-2 font-semibold capitalize">message<span aria-hidden="false">*</span></label>
-                <textarea class=" indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-40 rounded-md w-full mt-2 " name="message" id="MessageInput" rows="3" aria-required="true"></textarea>
+                <label for="MessageInput" class="text-MediumGrey flex gap-2 font-semibold capitalize">
+                    message
+                    <span aria-hidden="false">*</span>
+                </label>
+
+                <textarea class="focus:cursor-text indent-3 focus:outline-Green cursor-pointer outline-MediumGrey border-MediumGrey border-[1px] h-40 rounded-md w-full mt-2 " name="message" id="MessageInput" rows="3" aria-required="true"></textarea>
                 <p class="text-Red text-1 italic font-bold" id="MessageError" aria-describedby="message error"></p>
             </div>
 
-            <div >
+            <div>
                 <div class="flex gap-4 items-center flex-nowrap">
                     <input  class="cursor-pointer accent-green-600 h-4 w-4" type="checkbox" name="consent" id="consent" aria-required="true">
-                    <label class="cursor-pointer" for="consent">I hereby consent to being contacted by team <span class="text-Green"
-                            aria-hidden="true">*</span></label>
+                    <label class="cursor-pointer" for="consent">
+                        I hereby consent to being contacted by team
+                        <span class="text-Green" aria-hidden="true">*</span>
+                    </label>
                 </div>
                 <p class="text-Red text-1 italic font-bold" id="ConsentError" aria-describedby="consent error"></p>
             </div>
 
-            <button class="bg-Green rounded-md mt-11 text-White w-full h-12 text-center" type="submit">Submit</button>
+            <button aria-describedby="submit-button" class="bg-Green rounded-md mt-11 text-White w-full h-12 text-center" type="submit">Submit</button>
         </form>
     </main>
 
@@ -111,7 +120,7 @@
     <footer>
         <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-            Coded by <a href="https://www.frontendmentor.io/profile/ZHADOW999">Babalola victor</a>.
+            Coded by <a href="#">Babalola Victor</a>.
         </div>
     </footer>
 
