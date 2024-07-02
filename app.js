@@ -14,21 +14,68 @@ const messageError = document.querySelector('#MessageError');
 const consentError = document.querySelector('#ConsentError');
 
 const successMessage = document.querySelector('#successMessage');
-const back = document.querySelectorAll('.back');
 
 queryTypeInputs.forEach((input) => {
   input.addEventListener('click', (e) => {
     queryTypeInputs.forEach((input) => {
-      input.parentNode.classList.remove('bg-LightGreen','border-Green','border-[1.5px]');
+      input.parentNode.classList.remove('bg-LightGreen', 'border-Green', 'border-[1.5px]');
     });
-    e.target.parentNode.classList.add('bg-LightGreen','border-Green','border-[1.5px]');
+    e.target.parentNode.classList.add('bg-LightGreen', 'border-Green', 'border-[1.5px]');
+    queryTypeError.textContent = '';
   });
 });
 
+firstNameInput.addEventListener('input', () => {
+  if (firstNameInput.value.trim() === '') {
+    firstNameError.textContent = 'Please enter your first name';
+  } else {
+    firstNameError.textContent = '';
+  }
+});
+
+lastNameInput.addEventListener('input', () => {
+  if (lastNameInput.value.trim() === '') {
+    lastNameError.textContent = 'Please enter your last name';
+  } else {
+    lastNameError.textContent = '';
+  }
+});
+
+emailInput.addEventListener('input', () => {
+  if (emailInput.value.trim() === '' || !validateEmail(emailInput.value)) {
+    emailError.textContent = 'Please enter a valid email address';
+  } else {
+    emailError.textContent = '';
+  }
+});
+
+messageInput.addEventListener('input', () => {
+  if (messageInput.value.trim() === '') {
+    messageError.textContent = 'This field is required';
+  } else {
+    messageError.textContent = '';
+  }
+});
+
+consentInput.addEventListener('change', () => {
+  if (consentInput.checked) {
+    consentError.textContent = '';
+  }
+});
+
+form.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    validateForm();
+  }
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  validateForm();
+});
 
+function validateForm() {
   let isValid = true;
 
   // Validate first name
@@ -93,7 +140,7 @@ form.addEventListener('submit', (e) => {
       successMessage.classList.remove('-translate-y-44');
     }, 3000);
 
-    // Add this code to scroll to top and show success message
+    // Scroll to top and show success message
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout(() => {
       successMessage.classList.add('opacity-100'); // or any other class to show the message
@@ -103,13 +150,13 @@ form.addEventListener('submit', (e) => {
     lastNameInput.value = '';
     emailInput.value = '';
     queryTypeInputs.forEach((input) => {
-    input.checked = false;
-  });
-  messageInput.value = '';
-  consentInput.checked = false;
-
+      input.checked = false;
+      input.parentNode.classList.remove('bg-LightGreen', 'border-Green', 'border-[1.5px]');
+    });
+    messageInput.value = '';
+    consentInput.checked = false;
   }
-});
+}
 
 function validateEmail(email) {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
